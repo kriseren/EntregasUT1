@@ -83,8 +83,8 @@ public class ejercicio3
             creaNodo(document,nodoArtista,"id",String.valueOf(a.getId()));
             creaNodo(document,nodoArtista,"nombre",a.getNombre());
             creaNodo(document,nodoArtista,"cache",String.valueOf(a.getCache()));
-            creaNodo(document,nodoArtista,"edad",String.valueOf(a.getAge()));
-            char type = a.getType();
+            creaNodo(document,nodoArtista,"edad",String.valueOf(a.getEdad()));
+            char type = a.getTipo();
             if(type=='s')
                 creaNodo(document,nodoArtista,"tipo","Solista");
             else

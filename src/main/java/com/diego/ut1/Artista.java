@@ -1,26 +1,22 @@
 package com.diego.ut1;
 
-import jakarta.xml.bind.annotation.XmlElement;
-
-
 public class Artista
 {
     private int id;
-    @XmlElement(name="nombre")
-    private String nom;
+    private String nombre;
     private double cache;
-    private int age;
-    private char type;
+    private int edad;
+    private char tipo;
 
     public Artista() {}
 
     public Artista(int id, String nombre, double cache, int age, char type)
     {
         this.id = id;
-        this.nom = nombre;
+        this.nombre = nombre;
         this.cache = cache;
-        this.age = age;
-        this.type = type;
+        this.edad = age;
+        this.tipo = type;
     }
 
     public int getId() {
@@ -32,11 +28,11 @@ public class Artista
     }
 
     public String getNombre() {
-        return nom;
+        return nombre;
     }
 
     public void setNombre(String nombre) {
-        this.nom = nombre;
+        this.nombre = nombre;
     }
 
     public double getCache() {
@@ -47,20 +43,20 @@ public class Artista
         this.cache = cache;
     }
 
-    public int getAge() {
-        return age;
+    public int getEdad() {
+        return edad;
     }
 
-    public void setAge(int age) {
-        this.age = age;
+    public void setEdad(int age) {
+        this.edad = age;
     }
 
-    public char getType() {
-        return type;
+    public char getTipo() {
+        return tipo;
     }
 
-    public void setType(char type) {
-        this.type = type;
+    public void setTipo(char tipo) {
+        this.tipo = tipo;
     }
 
     @Override
@@ -68,10 +64,10 @@ public class Artista
     {
         return "Artista{" +
                 "id=" + id +
-                ", nombre='" + nom + '\'' +
+                ", nombre='" + nombre + '\'' +
                 ", cache=" + cache +
-                ", age=" + age +
-                ", type=" + type +
+                ", edad=" + edad +
+                ", tipo=" + tipo +
                 '}';
     }
 
@@ -81,8 +77,8 @@ public class Artista
         System.out.println("ID: "+getId());
         System.out.println("Nombre: "+getNombre());
         System.out.println("Cache: "+getCache());
-        System.out.println("Edad: "+getAge());
-        char type = getType();
+        System.out.println("Edad: "+getEdad());
+        char type = getTipo();
         if(type=='s')
             System.out.println("Tipo: Solista");
         else
