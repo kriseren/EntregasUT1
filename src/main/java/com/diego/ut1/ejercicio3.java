@@ -101,10 +101,13 @@ public class ejercicio3
             transformer = TransformerFactory.newInstance().newTransformer();
             transformer.setOutputProperty("indent","yes"); //Definimos la propiedad de tabulaciones y espacios.
             transformer.transform(source,resultado); // Transformamos la source en el fichero resultado.
+            System.out.println("\nRESULTADO DE LA ESCRITURA\n----------------------------------");
+            System.out.println("Fichero generado correctamente");
         }
         catch (TransformerException e) {
             throw new RuntimeException(e);
         }
+
     }
 
     public static void creaNodo(Document document,Element nodoArtista,String nombre, String dato)

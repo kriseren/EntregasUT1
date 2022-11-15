@@ -73,7 +73,7 @@ public class Artista
 
     public void muestraArtista()
     {
-        System.out.println("--------------");
+        System.out.println("-------------------------");
         System.out.println("ID: "+getId());
         System.out.println("Nombre: "+getNombre());
         System.out.println("Cache: "+getCache());

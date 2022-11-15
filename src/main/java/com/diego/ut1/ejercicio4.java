@@ -33,6 +33,8 @@ public class ejercicio4
             Marshaller marshaller = context.createMarshaller();
             marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT,true);
             marshaller.marshal(artistas,new File("files/artistasEj4.xml"));
+            System.out.println("\nRESULTADO DE LA ESCRITURA\n-------------------------");
+            System.out.println("Fichero generado correctamente.");
 
         } catch (JAXBException e) {
             throw new RuntimeException(e);
@@ -47,6 +49,7 @@ public class ejercicio4
             JAXBContext context = JAXBContext.newInstance(Artistas.class);
             Unmarshaller unmarshaller = context.createUnmarshaller();
             artistas = (Artistas) unmarshaller.unmarshal(new File("files/artistasEj4.xml"));
+            System.out.println("\nRESULTADO DE LA LECTURA");
             artistas.muestraArtistas();
         } catch (JAXBException e) {
             throw new RuntimeException(e);

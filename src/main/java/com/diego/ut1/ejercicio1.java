@@ -12,6 +12,7 @@ import javax.xml.transform.*;
 import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
 import java.io.*;
+import java.nio.file.Files;
 import java.util.Scanner;
 
 /**
@@ -337,7 +338,7 @@ public class ejercicio1
                 }
                 if(f1.exists())
                 {
-                    DataInputStream dis = new DataInputStream(new FileInputStream(f1));
+                    DataInputStream dis = new DataInputStream(Files.newInputStream(f1.toPath()));
                     while(dis.available()>0) //Mientras que queden líneas a leer en los sinónimos
                     {
                         //Creación del primer nodo.
@@ -396,7 +397,7 @@ public class ejercicio1
             {
                 if(f1.exists()) //Se comprueba si el fichero de sinónimos existe. En tal caso se comprueba si hay coincidencias.
                 {
-                    try(DataInputStream dis = new DataInputStream(new FileInputStream(f1)))
+                    try(DataInputStream dis = new DataInputStream(Files.newInputStream(f1.toPath())))
                     {
                         while(dis.available()>0)
                         {
