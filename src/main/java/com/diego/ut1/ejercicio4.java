@@ -22,8 +22,8 @@ public class ejercicio4
         {
             //Creamos los objetos lenguajes.
             Artista a1 = new Artista(1,"Diego Calatayud",123.4,19,'B');
-            Artista a2 = new Artista(1,"Javier Egido",341.2,19,'S');
-            Artista a3 = new Artista(1,"Arturo Collados",409,38,'S');
+            Artista a2 = new Artista(2,"Javier Egido",341.2,19,'S');
+            Artista a3 = new Artista(3,"Arturo Collados",409,38,'S');
             Artistas artistas = new Artistas();
             artistas.agregaArtista(a1);
             artistas.agregaArtista(a2);
